@@ -21,6 +21,7 @@ function reset_game() {
     count = 0;
     for (let i = 0; i < el.length; i++) {
         el[i].innerHTML = "";
+        el[i].style.backgroundColor = "white";
     }
     a.innerHTML = "Turn of X";
     document.querySelector(".info img").style.display = "none";
@@ -34,23 +35,63 @@ function check_Win()
 {
     // Checking For Rows
     if(el[0].innerHTML == el[1].innerHTML && el[2].innerHTML == el[0].innerHTML && el[0].innerHTML != "")
-    return true;
+    {
+        el[0].style.backgroundColor = "red";
+        el[1].style.backgroundColor = "red";
+        el[2].style.backgroundColor = "red";
+        return true;
+    }
     if(el[3].innerHTML == el[4].innerHTML && el[5].innerHTML == el[3].innerHTML && el[3].innerHTML != "")
-    return true;
+    {
+        el[3].style.backgroundColor = "red";
+        el[4].style.backgroundColor = "red";
+        el[5].style.backgroundColor = "red";
+        return true;
+    }
     if(el[6].innerHTML == el[7].innerHTML && el[8].innerHTML == el[6].innerHTML && el[6].innerHTML != "")
-    return true;
+    {
+        el[6].style.backgroundColor = "red";
+        el[7].style.backgroundColor = "red";
+        el[8].style.backgroundColor = "red";
+        return true;
+    }
     // Checking for Columns
     if(el[0].innerHTML == el[3].innerHTML && el[6].innerHTML == el[0].innerHTML && el[0].innerHTML != "")
-    return true;
+    {
+        el[0].style.backgroundColor = "red";
+        el[3].style.backgroundColor = "red";
+        el[6].style.backgroundColor = "red";
+        return true;
+    }
     if(el[1].innerHTML == el[4].innerHTML && el[1].innerHTML == el[7].innerHTML && el[1].innerHTML != "")
-    return true;
+    {
+        el[1].style.backgroundColor = "red";
+        el[4].style.backgroundColor = "red";
+        el[7].style.backgroundColor = "red";
+        return true;
+    }
     if(el[2].innerHTML == el[5].innerHTML && el[2].innerHTML == el[8].innerHTML && el[2].innerHTML != "")
-    return true;
+    {
+        el[2].style.backgroundColor = "red";
+        el[5].style.backgroundColor = "red";
+        el[8].style.backgroundColor = "red";
+        return true;
+    }
     // Checking For Diagonals
     if(el[0].innerHTML == el[4].innerHTML && el[0].innerHTML == el[8].innerHTML && el[0].innerHTML != "")
-    return true;
+    {
+        el[0].style.backgroundColor = "red";
+        el[4].style.backgroundColor = "red";
+        el[8].style.backgroundColor = "red";
+        return true;
+    }
     if(el[2].innerHTML == el[4].innerHTML && el[2].innerHTML == el[6].innerHTML && el[2].innerHTML != "")
-    return true;
+    {
+        el[2].style.backgroundColor = "red";
+        el[4].style.backgroundColor = "red";
+        el[6].style.backgroundColor = "red";
+        return true;
+    }
     return false;
 }
 // Logic of Playing Game
