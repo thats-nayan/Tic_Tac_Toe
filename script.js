@@ -1,11 +1,11 @@
 console.log("Welcome to Tic Tac Toe");
 
 // BackGround Music
-var music = new Audio('/Project8_TicTacToe/music.mp3');
+var music = new Audio('music.mp3');
 music.play();
 
 // Turn Music
-var audio = new Audio('/Project8_TicTacToe/ting.mp3');
+var audio = new Audio('ting.mp3');
 
 // Variables Required
 let reset = document.querySelector(".btn");
