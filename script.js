@@ -103,12 +103,7 @@ for (let i = 0; i < el.length; i++) {
             audio.play();
             count++;
             console.log("count = "+count);
-            if(count == 9)          // Game Draws
-            {
-                a.innerHTML = "Game Draw";
-                b.innerHTML = "Press Reset Button to Play Again";
-            }
-            else if(check_Win())
+            if(check_Win())
             {
                 if(turn == "X")
                 {
@@ -121,6 +116,11 @@ for (let i = 0; i < el.length; i++) {
                     b.innerHTML = "Press Reset Button to Play Again";
                 }
                 document.querySelector(".info img").style.display = "block";
+            }
+            else if(count == 9)          // Game Draws
+            {
+                a.innerHTML = "Game Draw";
+                b.innerHTML = "Press Reset Button to Play Again";
             }
             else
             {
